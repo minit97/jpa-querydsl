@@ -62,7 +62,7 @@ class MemberJpaRepositoryTest {
         condition.setTeamName("teamB");
 
         // condition 값없이 넘긴다면 쿼리가 데이터를 다 들고 온다.
-        List<MemberTeamDto> result = memberJpaRepository.searchByBuilder(condition);
+        List<MemberTeamDto> result = memberJpaRepository.search(condition);
 
         assertThat(result).extracting("username").containsExactly("member4");
     }
