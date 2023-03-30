@@ -91,7 +91,7 @@ class MemberRepositoryTest {
         PageRequest pageRequest = PageRequest.of(0, 3);
 
         // condition 값없이 넘긴다면 쿼리가 데이터를 다 들고 온다.
-        Page<MemberTeamDto> result = memberRepository.searchPageSimpe(condition, pageRequest);
+        Page<MemberTeamDto> result = memberRepository.searchPageSimple(condition, pageRequest);
 
         assertThat(result.getSize()).isEqualTo(3);
         assertThat(result.getContent()).extracting("username").containsExactly("member1","member2","member3");

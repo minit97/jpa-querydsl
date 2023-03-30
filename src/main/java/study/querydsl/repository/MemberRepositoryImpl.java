@@ -52,7 +52,7 @@ public class MemberRepositoryImpl implements MemberRepositoryCustom {
     }
 
     @Override
-    public Page<MemberTeamDto> searchPageSimpe(MemberSearchCondition condition, Pageable pageable) {
+    public Page<MemberTeamDto> searchPageSimple(MemberSearchCondition condition, Pageable pageable) {
         QueryResults<MemberTeamDto> results = queryFactory
                 .select(new QMemberTeamDto(
                         member.id.as("memberId"),
