@@ -130,7 +130,7 @@ public class MemberJpaRepository {
     }
 
     private BooleanExpression ageBetween(int ageLoe, int ageGoe) {
-        return ageLoe(ageGoe).and(ageGoe(ageGoe))
+        return ageLoe(ageGoe).and(ageGoe(ageGoe));
     }
 
     private BooleanExpression usernameEq(String username) {
